@@ -1,3 +1,7 @@
+:root{
+  --spacer: 1em;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,16 +26,54 @@ section,
 aside,
 main,
 footer {
-  min-height: 10em;
+  min-height: 8em;
   border: 1px solid;
+}
+
+header, 
+main, 
+aside {
+  background: beige;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  padding: 3em 0;
+  justify-content: center;
 }
 
 
 
+main section{
+  margin: var(--spacer);
+  flex: 1 0 calc(768px/3);
+}
+
+button {
+  margin: var(--spacer);
+  align-self: flex-start;
+}
+
+aside{
+  padding: var(--spacer);
+  align-content: flex-start;
+}
+
+aside button{
+  flex: 1 0 100%;
+  margin: calc(var(--spacer)/2);
+  align-self: flex-start;
+}
+
+footer {
+  padding: 10px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 20px 2%;
+  gap: 20px 2vw;
 }
 
 .col-2 {
@@ -102,14 +144,6 @@ footer {
   grid-column: span 12;
 }
 
-header {
-  background: beige;
-}
-
-footer {
-  padding: 10px;
-}
-
 @media screen and (min-width: 768px) {
   .col-md-1 {
     grid-column: span 1;
@@ -159,6 +193,9 @@ footer {
     grid-column: span 12;
   }
 
+  header button:last-child {
+    margin-left: auto;
+  }
 
 }
 
