@@ -16,12 +16,8 @@ This repository contains the code and projects I worked on throughout the fronte
 
 The repository is organized into various folders and projects, each representing different aspects of my frontend development journey. Here's an overview of the repository structure:
 
-- `/week_01`: Work in small groups to create a basic site with header, main, sidebar and footer.
-- `/week_02`: Work in small groups to create a basic grid layout using css grid.
-- `/homework`: Homework assignments completed during the course.
-- `/labs`: Lab exercises and practical assignments.
-- `/resources`: Useful resources, such as documentation, guides, and reference materials.
-- `/final-project`: Description and link to your final project (if applicable).
+- `/01_basic_layout`: Work in small groups to create a basic site with header, main, sidebar and footer.
+- `/02_basic_css_grid`: Work in small groups to create a basic grid layout using css grid.
 
 Feel free to explore each folder to learn more about the specific projects and assignments I completed during the course.
 
