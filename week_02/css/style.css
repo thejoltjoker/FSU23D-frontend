@@ -1,0 +1,71 @@
+* {
+	box-sizing: border-box;
+}
+
+/** Not allowed to change this initial CSS code **/
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+
+/*************************************************/
+
+#container {
+	width: 89.5%;
+	margin: 0 auto;
+}
+
+
+
+header,
+section,
+aside,
+main,
+footer {
+	min-height: 10em;
+	border: 1px solid;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 20px 2%;
+}
+
+.col-2 {
+	grid-column: span 2;
+}
+
+.col-3 {
+	grid-column: span 3;
+}
+
+.col-8 {
+	grid-column: span 8;
+}
+
+.col-9 {
+	grid-column: span 9;
+}
+
+.col-12 {
+	grid-column: span 12;
+}
+
+footer {
+	padding: 10px 0;
+}
+
+footer section:first-child{
+	margin-left: 10px;
+}
+
+footer section:last-child{
+	margin-right: 10px;
+}
+
+#container > *{
+	min-height: 150px;
+	border: 1px solid #000;
+	background-color: green;
+}
