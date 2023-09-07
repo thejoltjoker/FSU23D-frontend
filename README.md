@@ -18,6 +18,7 @@ The repository is organized into various folders and projects, each representing
 
 - `/01_basic_layout`: Work in small groups to create a basic site with header, main, sidebar and footer.
 - `/02_basic_css_grid`: Work in small groups to create a basic grid layout using css grid.
+- `/03_media_queries`: Practice using media queries to make a responsive layout.
 
 Feel free to explore each folder to learn more about the specific projects and assignments I completed during the course.
 
