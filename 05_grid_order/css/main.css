@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 960px;
+  margin: auto;
+  padding: 1em;
+  font-family: "SF Pro Text", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.grid-item {
+  grid-column: span 3;
+}
+
+.grid-item p {
+  padding: 0 1em;
+}
+
+img {
+  width: 100%;
+}
+
+
+#one {
+  border: 2px solid rebeccapurple;
+}
+
+#two {
+  border: 2px solid green;
+}
+
+#three {
+  border: 2px solid red;
+}
+
+#four {
+  border: 2px solid blue;
+}
+
+#five {
+  border: 2px solid cyan;
+}
+
+#six {
+  border: 2px solid yellow;
+}
+
+@media screen and (min-width: 600px) {
+  .grid-item {
+    grid-column: span 1;
+  }
+
+  #one {
+    order: 2;
+  }
+
+  #two {
+    order: 1;
+  }
+
+  #three {
+    order: 4;
+  }
+
+  #four {
+    order: 3;
+  }
+
+  #five {
+    order: 6;
+  }
+
+  #six {
+    order: 5;
+  }
+}
