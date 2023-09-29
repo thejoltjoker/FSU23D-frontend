@@ -33,6 +33,25 @@ img {
   --card-buttons-border: 1px solid #aaa;
 }
 
+.card-img {
+  position: relative;
+}
+
+.card-img-text {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  letter-spacing: .4em;
+  color: #fff;
+}
+
 .card-body {
   padding: .8em 1em .9em;
   display: flex;
