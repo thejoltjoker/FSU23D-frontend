@@ -292,11 +292,12 @@
    *
    * Write your code below and put the answer into the variable ANSWER.
    */
-  function round(input) {
-    // TODO: parameter for number of decimals
+  function round(input, decimals = 4) {
     // Function for rounding numbers to four decimals
-    return Math.round(input * 10000) / 10000;
+    let multiplier = 10 ** decimals;
+    return Math.round(input * multiplier) / multiplier;
   }
+
   function degreesToRadians(degrees) {
     // Calculate radians from degrees
     let radians = (degrees * Math.PI) / 180;
