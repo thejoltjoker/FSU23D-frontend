@@ -250,11 +250,8 @@
    */
 
   function inRange(value, rangeStart, rangeStop) {
-    if (value >= rangeStart && value <= rangeStop) {
-      // Return true if value is greater than rangeStart and less than rangeStop
-      return true;
-    }
-    return false;
+    // Return true if value is greater than rangeStart and less than rangeStop
+    return value >= rangeStart && value <= rangeStop;
   }
   result = inRange(434, 131, 547);
   console.log(result);
@@ -332,31 +329,66 @@
    * Write your code below and put the answer into the variable ANSWER.
    */
 
+  // function fizzBuzz(start, stop) {
+  //   let values = [];
+  //   if (start < stop) {
+  //     // Only run if start is greater than stop
+  //     for (let i = start; i <= stop; i++) {
+  //       if (i % 3 == 0 && i % 5 == 0) {
+  //         // Number is divisable by both three and five
+  //         values.push("Fizz Buzz");
+  //       } else if (i % 3 == 0) {
+  //         // Number is divisable by three
+  //         values.push("Fizz");
+  //       } else if (i % 5 == 0) {
+  //         // Number is divisable by five
+  //         values.push("Buzz");
+  //       } else {
+  //         values.push(i);
+  //       }
+  //     }
+  //     // Combine values to comma separated string
+  //     return values.join(",");
+  //   } else {
+  //     // Return error
+  //     return "The start value has to be lower than the stop value";
+  //   }
+  // }
+  // result = fizzBuzz(1, 30);
+
   function fizzBuzz(start, stop) {
-    let values = [];
-    if (start < stop) {
-      // Only run if start is greater than stop
-      for (let i = start; i <= stop; i++) {
-        if (i % 3 == 0 && !(i % 5 == 0)) {
-          // Number is divisable by three
-          values.push("Fizz");
-        } else if (!(i % 3 == 0) && i % 5 == 0) {
-          // Number is divisable by five
-          values.push("Buzz");
-        } else if (i % 3 == 0 && i % 5 == 0) {
-          // Number is divisable by both three and five
-          values.push("Fizz Buzz");
-        } else {
-          values.push(i);
-        }
-      }
-      // Combine values to comma separated string
-      return values.join(",");
-    } else {
-      // Return error
-      return "The start value has to be lower than the stop value";
+    let result = "";
+    if (start >= stop) {
+      return "Du kan inte ens ange två olika tal, idiot ☠️";
     }
+
+    for (let i = start; i <= stop; i++) {
+      // if (i % 3 == 0 && i % 5 == 0) {
+      //   result += "Fizz Buzz";
+      // } else if (i % 3 == 0) {
+      //   result += "Fizz";
+      // } else if (i % 5 == 0) {
+      //   result += "Buzz";
+      // } else {
+      //   result += i;
+      // }
+      // if (i != stop) {
+      //   result += ",";
+      // }
+      const isDivisableBy = (number, divider) => Boolean(number % divider == 0);
+      result +=
+        (isDivisableBy(i, 3) && isDivisableBy(i, 5)
+          ? "Fizz Buzz"
+          : isDivisableBy(i, 3)
+          ? "Fizz"
+          : isDivisableBy(i, 5)
+          ? "Buzz"
+          : i) + (i != stop ? "," : "");
+    }
+
+    return result;
   }
+
   result = fizzBuzz(1, 30);
   console.log(result);
   ANSWER = result;
