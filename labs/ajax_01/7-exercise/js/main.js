@@ -90,6 +90,7 @@ const addBlogPost = (title, date, text, tags) => {
 
   // Tags
   const tagsElem = document.createElement("ul");
+  tags.unshift("Tags:");
   tags.forEach((tag) => {
     const tagElem = document.createElement("li");
     tagElem.innerText = tag;
